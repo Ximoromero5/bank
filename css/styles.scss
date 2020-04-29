@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Public+Sans&display=swap");
+
+$marine: #2d314d;
+$green: #31d35c;
+$aqua: #2bb7da;
+$gray: #9698a6;
+$white: #ffffff;
+$second: #fafafa;
+$third: #f3f4f6;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $marine;
+    background-clip: padding-box;
+    border: 2px solid $second;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $second;
+}
+
+body {
+    font-family: "Public Sans", sans-serif;
+}
+header {
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99;
+    position: relative;
+    a.logo {
+    }
+    nav.menu {
+        ul {
+            display: flex;
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    display: block;
+                    padding: 20px 0;
+                    font-size: 15px;
+                    margin: 15px;
+                    color: $gray;
+                    border-bottom: 4px solid transparent;
+                    transition: all 0.2s;
+                    &:hover {
+                        border-bottom: 4px solid orange;
+                    }
+                }
+            }
+        }
+    }
+    button.request {
+        padding: 15px 35px;
+        border: none;
+        border-radius: 30px;
+        color: $white;
+        font-weight: bold;
+        font-size: 16px;
+        background: linear-gradient(to right, $green, $aqua);
+        outline: 0;
+        cursor: pointer;
+        transition: all 0.1s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+main {
+    margin: auto;
+    background: red;
+    section#section1 {
+        background: $second;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 140px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        .left {
+            margin-bottom: 150px;
+            h1 {
+                font-size: 50px;
+                font-weight: lighter;
+                color: $marine;
+                max-width: 80%;
+            }
+            p {
+                max-width: 69%;
+                line-height: 1.6;
+                font-size: 17px;
+                color: $gray;
+                margin: 30px 0;
+            }
+            button.request {
+                padding: 15px 35px;
+                border: none;
+                border-radius: 30px;
+                color: $white;
+                font-weight: bold;
+                font-size: 16px;
+                background: linear-gradient(to right, $green, $aqua);
+                outline: 0;
+                cursor: pointer;
+                transition: all 0.1s;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+        .right {
+            z-index: 88;
+            background: url("../images/bg-intro-desktop.svg");
+            background-size: cover;
+            background-position: -100px -140px;
+            background-repeat: no-repeat;
+            background-color: $second;
+        }
+    }
+}
